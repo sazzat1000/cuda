@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* ==================== Common CSS Start ==================== */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background: #eb7d4b;
+  padding: 10px 60px;
+  -webkit-box-shadow: 0px 3px 0px 0px #c86a40;
+          box-shadow: 0px 3px 0px 0px #c86a40;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+  margin: auto;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: #eb7d4b;
+  color: #eb7d4b;
+  -webkit-box-shadow: inset 0px -5px 0px 0px #c86a40;
+          box-shadow: inset 0px -5px 0px 0px #c86a40;
+}
+
+.btn-teal {
+  background: #17c2a4;
+  -webkit-box-shadow: 0px 3px 0px 0px #14a58c;
+          box-shadow: 0px 3px 0px 0px #14a58c;
+}
+
+.btn-teal:hover {
+  border-color: #17c2a4;
+  color: #17c2a4;
+  -webkit-box-shadow: inset 0px -4px 0px 0px #17c2a4;
+          box-shadow: inset 0px -4px 0px 0px #17c2a4;
+}
+
+.btn-sky {
+  background: #30bae7;
+  -webkit-box-shadow: 0px 3px 0px 0px #299ec5;
+          box-shadow: 0px 3px 0px 0px #299ec5;
+}
+
+.btn-sky:hover {
+  border-color: #30bae7;
+  color: #30bae7;
+  -webkit-box-shadow: inset 0px -3px 0px 0px #30bae7;
+          box-shadow: inset 0px -3px 0px 0px #30bae7;
+}
+
+.btn-control {
+  background: #e7c47e;
+  border: none;
+  padding: 5px 20px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #393939;
+  margin: 0 10px;
+}
+
+.btn-control:hover {
+  background: #fff;
+  -webkit-box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+  color: #393939;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-intro h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 10px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.section-intro h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 40%;
+  left: 40%;
+  width: 15%;
+  height: 3px;
+  background: #14a58c;
+  text-align: center;
+}
+
+.section-intro p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+}
+
+.up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  background: #643a79;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%;
+}
+
+.up:focus {
+  outline: 0;
+}
+
+/* ==================== Header Start ==================== */
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(135, 80, 156, 0.9)), to(rgba(135, 80, 156, 0.9))), url("img/banner-bg.jpg");
+  background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url("img/banner-bg.jpg");
+  height: 90vh;
+}
+
+header nav {
+  padding: 25px 0;
+}
+
+header nav .menu ul {
+  padding-top: 8px;
+}
+
+header nav .menu ul li {
+  display: inline-block;
+}
+
+header nav .menu ul li a {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-right: 7px;
+  padding: 3px 12px;
+  border-radius: 3px;
+}
+
+header nav .menu ul li a:hover,
+header nav .menu ul li a.active {
+  background: #643a79;
+}
+
+header .banner {
+  padding-top: 130px;
+}
+
+header .banner .banner-content h1 {
+  font-size: 42px;
+  color: #fff;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 55px;
+}
+
+header .sticky-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+          box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  z-index: 9999;
+  -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+          animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: rgba(100, 58, 121, 0.8);
+}
+
+.slicknav_menu {
+  display: none;
+  background: rgba(135, 80, 156, 0.9);
+  padding-bottom: 18px;
+}
+
+.slicknav_btn {
+  margin: 0 30px 6px;
+  background: transparent;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+  height: 3px;
+  width: 30px;
+  margin: 7px 0;
+  background: #fff;
+}
+
+.slicknav_menu .slicknav_menutxt {
+  display: none;
+}
+
+.slicknav_nav {
+  padding-top: 15px;
+}
+
+.slicknav_nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.slicknav_nav a.active,
+.slicknav_nav a:hover {
+  color: #fff;
+  background: #754a8b;
+}
+
+/* ==================== Header End ==================== */
+/* ==================== Service Start ==================== */
+#service {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 194, 164, 0.9)), to(rgba(23, 194, 164, 0.9))), url("img/services-bg.jpg");
+  background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)), url("img/services-bg.jpg");
+  padding: 100px 0 70px;
+}
+
+#service .service-content .service-item {
+  color: #fff;
+  text-align: center;
+  padding: 0 22px;
+  margin-bottom: 50px;
+}
+
+#service .service-content .service-item img {
+  height: 120px;
+  margin-bottom: 50px;
+}
+
+#service .service-content .service-item h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#service .service-content .service-item p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ==================== Service End ==================== */
+/* ==================== Team Start ==================== */
+#team {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(231, 241, 248, 0.9)), to(rgba(231, 241, 248, 0.9))), url("img/team-bg.jpg");
+  background: linear-gradient(rgba(231, 241, 248, 0.9), rgba(231, 241, 248, 0.9)), url("img/team-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0 40px;
+}
+
+#team .section-intro h2 {
+  color: #3c4761;
+}
+
+#team .section-intro h2::after {
+  background: #c8d9e5;
+}
+
+#team .section-intro p {
+  color: #3c4761;
+}
+
+#team .team-content .team-item {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+#team .team-content .team-item img {
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+#team .team-content .team-item h4 {
+  font-size: 24px;
+  color: #27283d;
+  text-transform: uppercase;
+  line-height: 15px;
+}
+
+#team .team-content .team-item span {
+  font-size: 16px;
+  color: #30bae7;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#team .team-content .team-item p {
+  font-size: 16px;
+  color: #3c4761;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+#team .team-content .team-item .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#team .team-content .team-item .social a i {
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #bdd1df;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#team .team-content .team-item .social a i::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #643a79;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#team .team-content .team-item .social a:hover i::after {
+  bottom: 0;
+  z-index: -1;
+}
+
+/* ==================== Team End ==================== */
+/* ==================== Skill Start ==================== */
+#skill {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("img/skill-bg.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("img/skill-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 50px;
+}
+
+#skill .section-intro h2 {
+  color: #3c4761;
+}
+
+#skill .section-intro h2::after {
+  background: #dfe8ed;
+}
+
+#skill .section-intro p {
+  color: #838a9b;
+}
+
+#skill .skill-content .skill-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#skill .skill-content .skill-item svg.radial-progress circle {
+  stroke: #30bae7;
+  stroke-width: 5;
+}
+
+#skill .skill-content .skill-item svg.radial-progress text {
+  fill: #3c4761;
+  text-anchor: middle;
+}
+
+#skill .skill-content .skill-item svg.html circle {
+  stroke: #d74680;
+}
+
+#skill .skill-content .skill-item svg.graphic circle {
+  stroke: #15c7a8;
+}
+
+#skill .skill-content .skill-item svg.ui circle {
+  stroke: #eb7d4b;
+}
+
+#skill .skill-content h3 {
+  font-size: 24px;
+  color: #3c4761;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+/* ==================== Skill End ==================== */
+/* ==================== Portfolio Start ==================== */
+#portfolio {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 221, 153, 0.8)), to(rgba(255, 221, 153, 0.8))), url("img/portfolio-bg.jpg");
+  background: linear-gradient(rgba(255, 221, 153, 0.8), rgba(255, 221, 153, 0.8)), url("img/portfolio-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+#portfolio .section-intro h2,
+#portfolio .section-intro p {
+  color: #3c4761;
+}
+
+#portfolio .section-intro h2::after {
+  background: #e5c37f;
+}
+
+#portfolio .portfolio-content {
+  text-align: center;
+}
+
+#portfolio .portfolio-content .control {
+  margin-bottom: 70px;
+}
+
+#portfolio .portfolio-content .control .mixitup-control-active {
+  background: #fff;
+  -webkit-box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+#portfolio .portfolio-content .mix {
+  margin-bottom: 30px;
+}
+
+#portfolio .portfolio-content .mix img {
+  margin-bottom: 15px;
+}
+
+#portfolio .portfolio-content .mix p {
+  font-size: 18px;
+  color: #393939;
+}
+
+#portfolio .portfolio-content .btn-teal {
+  margin-top: 40px;
+}
+
+/* ==================== Portfolio End ==================== */
+/* ==================== Testimonial Start ==================== */
+#testimonial {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(215, 70, 128, 0.8)), to(rgba(215, 70, 128, 0.8))), url("img/testimonial-bg.jpg");
+  background: linear-gradient(rgba(215, 70, 128, 0.8), rgba(215, 70, 128, 0.8)), url("img/testimonial-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 70px 0 30px;
+}
+
+#testimonial .section-intro h2 {
+  letter-spacing: 5px;
+}
+
+#testimonial .section-intro h2::after {
+  background: #b73c6d;
+}
+
+#testimonial .testimonial-content .testimonial-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+#testimonial .testimonial-content .testimonial-item .client-image img {
+  width: 80%;
+  border-radius: 50%;
+}
+
+#testimonial .testimonial-content .testimonial-item .client-review {
+  padding: 0 30px;
+}
+
+#testimonial .testimonial-content .testimonial-item .client-review p {
+  font-size: 21px;
+  line-height: 31px;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+#testimonial .testimonial-content .testimonial-item .client-review h5 {
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 15px;
+}
+
+#testimonial .testimonial-content .testimonial-item .client-review span {
+  font-size: 18px;
+  color: #ffdd99;
+}
+
+/* ==================== Testimonial End ==================== */
+/* ==================== Contact Start ==================== */
+#contact {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 84, 153, 0.8)), to(rgba(60, 84, 153, 0.8))), url("img/contact-bg.jpg");
+  background: linear-gradient(rgba(60, 84, 153, 0.8), rgba(60, 84, 153, 0.8)), url("img/contact-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0 40px;
+}
+
+#contact .section-intro h2::after {
+  background: #273a71;
+}
+
+#contact .contact-form form .input-element {
+  width: 100%;
+  background: #273a71;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+#contact .contact-form form textarea {
+  height: 200px;
+  resize: none;
+}
+
+#contact .contact-form form ::-webkit-input-placeholder {
+  font-size: 18px;
+  color: silver;
+  text-transform: capitalize;
+}
+
+#contact .contact-form form :-ms-input-placeholder {
+  font-size: 18px;
+  color: silver;
+  text-transform: capitalize;
+}
+
+#contact .contact-form form ::-ms-input-placeholder {
+  font-size: 18px;
+  color: silver;
+  text-transform: capitalize;
+}
+
+#contact .contact-form form ::placeholder {
+  font-size: 18px;
+  color: silver;
+  text-transform: capitalize;
+}
+
+#contact .contact-form form input:focus,
+#contact .contact-form form textarea:focus {
+  outline: none;
+}
+
+#contact .contact-form form .btn {
+  margin-top: 30px;
+}
+
+/* ==================== Contact End ==================== */
+/* ==================== Footer Start ==================== */
+footer {
+  background: #344b8e;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid #fff;
+}
+
+footer a {
+  font-size: 24px;
+  color: #fff;
+  margin: 0 20px;
+}
+
+footer a:hover {
+  color: #30bae7;
+}
+
+/* ==================== Footer End ==================== */
+/*# sourceMappingURL=style.css.map */

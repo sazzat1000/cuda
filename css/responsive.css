@@ -1,0 +1,40 @@
+@media (max-width: 991px) {
+  .section-intro h2 {
+    letter-spacing: 5px;
+  }
+  header nav {
+    display: none;
+  }
+  header .banner .banner-content h1 {
+    font-size: 28px;
+  }
+  .slicknav_menu {
+    display: block;
+  }
+  #testimonial .testimonial-content .testimonial-item {
+    display: block;
+    text-align: center;
+  }
+  #testimonial .testimonial-content .testimonial-item .client-image {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  #testimonial .testimonial-content .testimonial-item .client-image img {
+    width: 40%;
+  }
+  footer a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  header .banner {
+    padding-top: 0;
+  }
+  header .banner .banner-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,545 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* ==================== Common CSS Start ==================== */
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+  transition: 0.5s;
+}
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background: #eb7d4b;
+  padding: 10px 60px;
+  box-shadow: 0px 3px 0px 0px #c86a40;
+  transition: 0.5s;
+  display: inline-block;
+  margin: auto;
+}
+.btn:hover {
+  background: transparent;
+  border-color: #eb7d4b;
+  color: #eb7d4b;
+  box-shadow: inset 0px -5px 0px 0px #c86a40;
+}
+.btn-teal {
+  background: #17c2a4;
+  box-shadow: 0px 3px 0px 0px #14a58c;
+}
+.btn-teal:hover {
+  border-color: #17c2a4;
+  color: #17c2a4;
+  box-shadow: inset 0px -4px 0px 0px #17c2a4;
+}
+.btn-sky {
+  background: #30bae7;
+  box-shadow: 0px 3px 0px 0px #299ec5;
+}
+.btn-sky:hover {
+  border-color: #30bae7;
+  color: #30bae7;
+  box-shadow: inset 0px -3px 0px 0px #30bae7;
+}
+.btn-control {
+  background: #e7c47e;
+  border: none;
+  padding: 5px 20px;
+  box-shadow: none;
+  color: #393939;
+  margin: 0 10px;
+}
+.btn-control:hover {
+  background: #fff;
+  box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+  color: #393939;
+}
+.section-intro {
+  text-align: center;
+  margin-bottom: 60px;
+  h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 10px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 40%;
+    left: 40%;
+    width: 15%;
+    height: 3px;
+    background: #14a58c;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+  }
+}
+.up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  background: #643a79;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%;
+}
+.up:focus {
+  outline: 0;
+}
+/* ==================== Header Start ==================== */
+header {
+  background: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)),
+    url("img/banner-bg.jpg");
+  height: 90vh;
+  nav {
+    padding: 25px 0;
+    .menu {
+      ul {
+        padding-top: 8px;
+        li {
+          display: inline-block;
+          a {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-right: 7px;
+            padding: 3px 12px;
+            border-radius: 3px;
+          }
+          a:hover,
+          a.active {
+            background: #643a79;
+          }
+        }
+      }
+    }
+  }
+  .banner {
+    padding-top: 130px;
+    .banner-content {
+      h1 {
+        font-size: 42px;
+        color: #fff;
+        line-height: 48px;
+        font-weight: 700;
+        margin-bottom: 55px;
+      }
+    }
+  }
+  .sticky-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    z-index: 9999;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    background: rgba(100, 58, 121, 0.8);
+  }
+}
+.slicknav_menu {
+  display: none;
+  background: rgba(135, 80, 156, 0.9);
+  padding-bottom: 18px;
+}
+.slicknav_btn {
+  margin: 0 30px 6px;
+  background: transparent;
+}
+.slicknav_menu .slicknav_icon-bar {
+  height: 3px;
+  width: 30px;
+  margin: 7px 0;
+  background: #fff;
+}
+.slicknav_menu .slicknav_menutxt {
+  display: none;
+}
+.slicknav_nav {
+  padding-top: 15px;
+}
+.slicknav_nav a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.slicknav_nav a.active,
+.slicknav_nav a:hover {
+  color: #fff;
+  background: #754a8b;
+}
+/* ==================== Header End ==================== */
+
+/* ==================== Service Start ==================== */
+#service {
+  background: linear-gradient(rgba(23, 194, 164, 0.9), rgba(23, 194, 164, 0.9)),
+    url("img/services-bg.jpg");
+  padding: 100px 0 70px;
+  .service-content {
+    .service-item {
+      color: #fff;
+      text-align: center;
+      padding: 0 22px;
+      margin-bottom: 50px;
+      img {
+        height: 120px;
+        margin-bottom: 50px;
+      }
+      h4 {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+/* ==================== Service End ==================== */
+
+/* ==================== Team Start ==================== */
+#team {
+  background: linear-gradient(
+      rgba(231, 241, 248, 0.9),
+      rgba(231, 241, 248, 0.9)
+    ),
+    url("img/team-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0 40px;
+
+  .section-intro {
+    h2 {
+      color: #3c4761;
+    }
+    h2::after {
+      background: #c8d9e5;
+    }
+    p {
+      color: #3c4761;
+    }
+  }
+  .team-content {
+    .team-item {
+      text-align: center;
+      padding: 0 10px;
+      margin-bottom: 50px;
+      img {
+        border-radius: 50%;
+        margin-bottom: 25px;
+      }
+      h4 {
+        font-size: 24px;
+        color: #27283d;
+        text-transform: uppercase;
+        line-height: 15px;
+      }
+      span {
+        font-size: 16px;
+        color: #30bae7;
+        display: block;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        color: #3c4761;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+      .social {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+          i {
+            font-size: 18px;
+            color: #fff;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #bdd1df;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+          }
+          i::after {
+            content: "";
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #643a79;
+            transition: 0.5s;
+          }
+        }
+        a:hover i::after {
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+/* ==================== Team End ==================== */
+
+/* ==================== Skill Start ==================== */
+#skill {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("img/skill-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 50px;
+  .section-intro {
+    h2 {
+      color: #3c4761;
+    }
+    h2::after {
+      background: #dfe8ed;
+    }
+    p {
+      color: #838a9b;
+    }
+  }
+  .skill-content {
+    .skill-item {
+      text-align: center;
+      margin-bottom: 30px;
+      svg.radial-progress {
+        circle {
+          stroke: #30bae7;
+          stroke-width: 5;
+        }
+        text {
+          fill: #3c4761;
+          text-anchor: middle;
+        }
+      }
+      svg.html {
+        circle {
+          stroke: #d74680;
+        }
+      }
+      svg.graphic {
+        circle {
+          stroke: #15c7a8;
+        }
+      }
+      svg.ui {
+        circle {
+          stroke: #eb7d4b;
+        }
+      }
+    }
+    h3 {
+      font-size: 24px;
+      color: #3c4761;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+  }
+}
+/* ==================== Skill End ==================== */
+
+/* ==================== Portfolio Start ==================== */
+#portfolio {
+  background: linear-gradient(
+      rgba(255, 221, 153, 0.8),
+      rgba(255, 221, 153, 0.8)
+    ),
+    url("img/portfolio-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px 0;
+  .section-intro {
+    h2,
+    p {
+      color: #3c4761;
+    }
+    h2::after {
+      background: #e5c37f;
+    }
+  }
+  .portfolio-content {
+    text-align: center;
+    .control {
+      margin-bottom: 70px;
+      .mixitup-control-active {
+        background: #fff;
+        box-shadow: inset 0px -3px 6px 0px rgba(0, 0, 0, 0.75);
+      }
+    }
+    .mix {
+      margin-bottom: 30px;
+      img {
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 18px;
+        color: #393939;
+      }
+    }
+    .btn-teal {
+      margin-top: 40px;
+    }
+  }
+}
+/* ==================== Portfolio End ==================== */
+
+/* ==================== Testimonial Start ==================== */
+#testimonial {
+  background: linear-gradient(rgba(215, 70, 128, 0.8), rgba(215, 70, 128, 0.8)),
+    url("img/testimonial-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 70px 0 30px;
+  .section-intro {
+    h2 {
+      letter-spacing: 5px;
+    }
+    h2::after {
+      background: #b73c6d;
+    }
+  }
+  .testimonial-content {
+    .testimonial-item {
+      display: flex;
+      color: #fff;
+      margin-bottom: 80px;
+      .client-image {
+        img {
+          width: 80%;
+          border-radius: 50%;
+        }
+      }
+      .client-review {
+        padding: 0 30px;
+        p {
+          font-size: 21px;
+          line-height: 31px;
+          font-style: italic;
+          font-weight: 300;
+          margin-bottom: 25px;
+        }
+        h5 {
+          font-size: 24px;
+          text-transform: uppercase;
+          line-height: 15px;
+        }
+        span {
+          font-size: 18px;
+          color: #ffdd99;
+        }
+      }
+    }
+  }
+}
+/* ==================== Testimonial End ==================== */
+
+/* ==================== Contact Start ==================== */
+#contact {
+  background: linear-gradient(rgba(60, 84, 153, 0.8), rgba(60, 84, 153, 0.8)),
+    url("img/contact-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 70px 0 40px;
+  .section-intro {
+    h2::after {
+      background: #273a71;
+    }
+  }
+  .contact-form {
+    form {
+      .input-element {
+        width: 100%;
+        background: #273a71;
+        border: none;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        color: #fff;
+      }
+      textarea {
+        height: 200px;
+        resize: none;
+      }
+      ::placeholder {
+        font-size: 18px;
+        color: silver;
+        text-transform: capitalize;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      .btn {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+/* ==================== Contact End ==================== */
+
+/* ==================== Footer Start ==================== */
+footer {
+  background: #344b8e;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid #fff;
+  a {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 20px;
+  }
+  a:hover {
+    color: #30bae7;
+  }
+}
+/* ==================== Footer End ==================== */
